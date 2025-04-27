@@ -8,18 +8,22 @@
 </head>
 <body>
     <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-6">
-                <img id="main-image" src="assets/spirited.jpg" class="img-fluid rounded" alt="Spirited Away">
-            </div>
-            <div class="col-md-6">
-                <h1 class="display-4">Spirited Away</h1>
-                <p class="lead" id="description-text">Spirited Away tells the story of Chihiro, a young girl who finds herself trapped in a mysterious and magical world of spirits. To return to the human world, she must work in a bathhouse for the spirits and find her inner strength.</p>
+        <div class="row align-items-center">
+            <div class="col-md-6 order-md-last">
+                <h1 class="display-4 mb-3">Spirited Away</h1>
                 <div class="mt-3">
                     <button class="btn btn-primary btn-lg" onclick="showDescription()">Description</button>
                     <button class="btn btn-success btn-lg" onclick="showCast()">Cast</button>
                     <button class="btn btn-warning btn-lg" onclick="showTrivia()">Trivia</button>
                 </div>
+            </div>
+            <div class="col-md-6 order-md-first">
+                <img id="main-image" src="assets/spirited.jpg" class="img-fluid rounded" alt="Spirited Away">
+            </div>
+        </div>
+        <div class="row mt-4" id="description-section">
+            <div class="col-12">
+                <p class="lead">Spirited Away tells the story of Chihiro, a young girl who finds herself trapped in a mysterious and magical world of spirits. To return to the human world, she must work in a bathhouse for the spirits and find her inner strength.</p>
             </div>
         </div>
         <div class="row mt-4" id="cast-section" style="display:none;">
@@ -60,17 +64,17 @@
         function showDescription() {
             document.getElementById('cast-section').style.display = 'none';
             document.getElementById('trivia-section').style.display = 'none';
-            document.getElementById('description-text').style.display = 'block';
+            document.getElementById('description-section').style.display = 'block';
         }
 
         function showCast() {
-            document.getElementById('description-text').style.display = 'none';
+            document.getElementById('description-section').style.display = 'none';
             document.getElementById('trivia-section').style.display = 'none';
             document.getElementById('cast-section').style.display = 'block';
         }
 
         function showTrivia() {
-            document.getElementById('description-text').style.display = 'none';
+            document.getElementById('description-section').style.display = 'none';
             document.getElementById('cast-section').style.display = 'none';
             document.getElementById('trivia-section').style.display = 'block';
         }
